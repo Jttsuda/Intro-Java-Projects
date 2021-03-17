@@ -1,6 +1,6 @@
 // Program: Lab8.java
 // Author: Jared Suda
-// Last Modified: March 5, 2021
+// Last Modified: March 17, 2021
 // Desc.: RNG X's
 
 public class Lab8 {
