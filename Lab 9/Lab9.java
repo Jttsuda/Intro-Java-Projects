@@ -1,10 +1,10 @@
-// Program: Lab8.java
+// Program: Lab9.java
 // Author: Jared Suda
 // Last Modified: March 17, 2021
-// Desc.: RNG X's
+// Desc.: 
 import java.util.Random;
 
-public class Lab8 {
+public class Lab9 {
    public static void main(String[] args) {
       Random rand = new Random();
       for(int i = 0; i < rand.nextInt(9) + 2; i++) {
