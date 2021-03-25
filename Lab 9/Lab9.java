@@ -1,17 +1,43 @@
 // Program: Lab9.java
 // Author: Jared Suda
 // Last Modified: March 17, 2021
-// Desc.: 
-import java.util.Random;
+// Desc.: Reading and Writing to a File
+
+import java.io.*;
+import java.util.Scanner;
 
 public class Lab9 {
    public static void main(String[] args) {
-      Random rand = new Random();
-      for(int i = 0; i < rand.nextInt(9) + 2; i++) {
-         for(int x = 0; x < rand.nextInt(16) + 5; x++) {
-            System.out.print("x");
+      try {
+         Scanner reader = new Scanner(new File("romeo_and_juliet.txt"));
+         int count = 0;
+         while (reader.hasNextLine()) {
+            String data = reader.nextLine();
+            count += 1;
+            if (count >= 709 && count <= 714) {
+               writeToFile(data);
+            }
          }
-         System.out.println();
+         reader.close();
+      } 
+      catch (FileNotFoundException e) {
+         System.out.println("An error occurred.");
+         e.printStackTrace();
       }
    }
+  
+   public static void writeToFile(String data) {
+      File output = new File("output.txt");
+      try {
+         FileWriter writer = new FileWriter("output.txt", true);
+         writer.write(data + "\n");      
+         writer.close();
+      } 
+      catch (IOException e) {
+         System.out.println("An error occurred.");
+         e.printStackTrace();
+      }
+   }
+  
+  
 }
