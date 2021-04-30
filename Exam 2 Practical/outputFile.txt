@@ -1,0 +1,8 @@
+The sequential nature of files severely limits the number of interesting things you can 
+
+easily do with them. The algorithm we have examined so far have all been sequential 
+
+algorithms: algorithms that can be performed by examining each data item once, in 
+
+sequence.
+

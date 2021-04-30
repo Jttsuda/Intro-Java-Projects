@@ -1,19 +1,25 @@
-// Program: Lab10.java
+// Program: Exam2.java
 // Author: Jared Suda
-// Last Modified: April 2, 2021
-// Desc.: Working with Arrays
+// Last Modified: April 30, 2021
+// Desc.: Exam 2 Practical
 
-public class Lab10 {
+public class Exam2 {
    public static void main(String[] args) {
-      String[] daynames2 = {"Mon", "Tue", "Sun", "Wed", "Thu", "Sun", "Fri", "Sat", "Sun"};
-      int count = 0;
-      for (int i = 0; i < daynames2.length; i++) {
-         if (daynames2[i] == "Sun") {
-            count += 1;
-            daynames2[i] = "Holiday";
-         }
-      }
-      
-      System.out.println("Occurences: " + count);
+      printTriangleType(5, 7, 7);
+      printTriangleType(6, 6, 6);
+      printTriangleType(5, 7, 8);
+      printTriangleType(2, 18, 2);
+
+
    }
+   
+   public static void printTriangleType(int a, int b, int c) {
+       if (a == b && b == c) {
+           System.out.println("Equilateral");
+       } else if (a == b || b == c || a == c) {
+           System.out.println("Isosceles");
+       } else {fasdf
+           System.out.println("Scalene");
+       }
+}
 }
